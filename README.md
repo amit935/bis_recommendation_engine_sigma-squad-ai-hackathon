@@ -55,6 +55,22 @@ python inference.py --input data/public_test_set.json --output pub_results.json
 
 *(Note: If you change the underlying PDF, simply delete `bis_index.faiss` and `bis_chunks.pkl` to force a rebuild).*
 
+---
+
+## 🌟 Interactive Web UI (Highly Recommended!)
+
+While the CLI script fulfills the strict backend testing requirements, **we have also built a full, enterprise-grade interactive web interface** for MSEs! 
+
+To view the live UI, complete with performance dashboards and an AI-generated explanation of *why* the standard applies to your exact query, simply run:
+
+```bash
+streamlit run src/app.py
+```
+
+This will automatically open the UI in your web browser. Try testing it with a vague query like *"Our company makes shiny metal roofing that doesn't rust"* to see the RAG engine seamlessly find "Galvanized Steel" under the hood!
+
+---
+
 ## Performance Metrics
 On the provided datasets, this engine achieves:
 - **Public Test Set (Exact Queries)**: 100% Hit Rate @3 | 1.000 MRR @5
