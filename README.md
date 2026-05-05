@@ -57,9 +57,9 @@ python inference.py --input data/public_test_set.json --output pub_results.json
 
 ---
 
-## 🌟 Interactive Web UI (Highly Recommended!)
+## Interactive Web UI (Highly Recommended!)
 
-While the CLI script fulfills the strict backend testing requirements, **we have also built a full, enterprise-grade interactive web interface** for MSEs! 
+While the CLI script fulfills the strict backend testing requirements, **we have also built a full interactive web interface**! 
 
 To view the live UI, complete with performance dashboards and an AI-generated explanation of *why* the standard applies to your exact query, simply run:
 
