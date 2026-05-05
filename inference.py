@@ -42,7 +42,7 @@ CHUNKS_PATH    = "bis_chunks.pkl"
 EMBED_MODEL    = "./bis-finetuned-minilm" 
 
 TOP_K_RETRIEVE = 40
-TOP_K_RERANK   = 15
+TOP_K_RERANK   = 10
 TOP_K_RETURN   = 5
 RRF_K          = 60
 
@@ -182,7 +182,7 @@ class BISEngine:
             sid = doc['standard_id']
             title = doc['title']
             scope = doc['enriched_text'].split('Scope: ')[-1].split('Applications: ')[0].strip()
-            context_blocks.append(f"[{i+1}] ID: {sid} | Title: {title} | Scope: {scope[:200]}")
+            context_blocks.append(f"[{i+1}] ID: {sid} | Title: {title} | Scope: {scope[:100]}")
             
         context_str = "\n".join(context_blocks)
         
