@@ -147,7 +147,7 @@ def chunk_by_standard(full_text: str) -> list:
 class BISEngine:
     def __init__(self):
         print("[1/3] Initializing Groq Reranker...")
-        self.groq_client = Groq(api_key=GROQ_API_KEY)
+        self.groq_client = Groq(api_key=GROQ_API_KEY, max_retries=0, timeout=1.5)
         
         print(f"[2/3] Loading Local Embeddings ({EMBED_MODEL})...")
         self.embed_model = SentenceTransformer(EMBED_MODEL)
